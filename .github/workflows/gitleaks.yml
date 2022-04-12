@@ -8,9 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: gitleaks-action with defaults
-        uses: GiriRaj249/gitleaks-actions@main
+        uses: zricethezav/gitleaks-action@master
       - name: gitleaks-action with config
-        uses: GiriRaj249/gitleaks-actions@main
+        uses: zricethezav/gitleaks-action@master
         with:
           config-path: .gitleaks.yml
 
