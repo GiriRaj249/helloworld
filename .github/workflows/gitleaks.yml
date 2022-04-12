@@ -12,5 +12,5 @@ jobs:
       - name: gitleaks-action with config
         uses: GiriRaj249/gitleaks-actions@main
         with:
-          config-path: .gitleaks.toml
+          config-path: .gitleaks.yml
 
