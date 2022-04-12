@@ -13,3 +13,6 @@ jobs:
         uses: GiriRaj249/gitleaks-actions@main
         with:
           config-path: .gitleaks.yml
+          path: ./action
+      - name: run git actions
+        uses: ./action
