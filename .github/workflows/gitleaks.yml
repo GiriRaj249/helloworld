@@ -13,3 +13,4 @@ jobs:
         uses: GiriRaj249/gitleaks-actions@main
         with:
           config-path: .gitleaks.yml
+          token: ${{ secrets.Git_Token }}
