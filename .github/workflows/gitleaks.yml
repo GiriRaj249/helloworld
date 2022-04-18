@@ -6,16 +6,14 @@ jobs:
   gitleaks:
     runs-on: ubuntu-latest
     steps:
-      - name: gitleaks-action with defaults
       - uses: actions/checkout@v2
-        with:
-		fetch-depth: '0'
-       # uses: GiriRaj249/gitleaks-actions@main
-       - name: gitleaks-action with config (priv)
+      - name: gitleaks-action with defaults
+      	with:
+	  fetch-depth: '0'  
+        uses: GiriRaj249/gitleaks-actions@main
+      - name: gitleaks-action with config
         uses: GiriRaj249/gitleaks-actions@main
         with:
-          repository: GiriRaj249/gitleaks-action
-          ref: main
-          config-path: .gitleaks.toml
+          config-path: .gitleaks.yml
           token: ${{ secrets.Git_Token }}
  
