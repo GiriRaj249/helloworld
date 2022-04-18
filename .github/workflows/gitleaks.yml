@@ -5,9 +5,9 @@ on: [push, pull_request, workflow_dispatch]
 jobs:
   gitleaks:
     runs-on: ubuntu-latest
-    token: ${{ secrets.Git_Token }}
     steps:
       - uses: actions/checkout@v1
+        token: ${{ secrets.Git_Token }}
       - name: gitleaks-action with defaults
         uses: GiriRaj249/gitleaks-actions@main
       - name: gitleaks-action with config
