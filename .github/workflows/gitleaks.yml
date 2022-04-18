@@ -14,8 +14,8 @@ jobs:
           ref: main
           token: ${{ secrets.Git_Token }}
           path: .gitleaks.toml
-      - name: gitleaks-action with config
-        uses: GiriRaj249/gitleaks-actions@main
-        with:
-          config-path: .gitleaks.toml
-          token: ${{ secrets.Git_Token }}
+ #     - name: gitleaks-action with config
+#        uses: GiriRaj249/gitleaks-actions@main
+  #      with:
+ #         config-path: .gitleaks.toml
+ #         token: ${{ secrets.Git_Token }}
