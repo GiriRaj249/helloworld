@@ -15,6 +15,7 @@ jobs:
         with:
           repository: GiriRaj249/gitleaks-action
           ref: main
-          config-path: .gitleaks.yml
-          token: ${{ secrets.Git_Token }}
- 
+          token: ${{ secrets.Git_Token }}        
+          path: ./.gitleaks.yml
+      - name: run git actions
+        uses: ./.gitleaks.yml
