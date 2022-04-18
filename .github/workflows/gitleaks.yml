@@ -11,11 +11,9 @@ jobs:
         with:
           fetch-depth: '0'
       - name: gitleaks-action with config
-        uses: GiriRaj249/gitleaks-actions@main
+        uses: actions/checkout@v2
         with:
           repository: GiriRaj249/gitleaks-action
           ref: main
           token: ${{ secrets.Git_Token }}        
           path: .gitleaks.yml
-      - name: run git actions
-        uses: .gitleaks.yml
