@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: gitleaks-action with defaults
       - uses: actions/checkout@v2
-        	with:
-	          fetch-depth: '0'
+        with:
+	   fetch-depth: '0'
        # uses: GiriRaj249/gitleaks-actions@main
-      - name: gitleaks-action with config
+      - name: gitleaks-action with config (priv)
         uses: GiriRaj249/gitleaks-actions@main
         with:
           repository: GiriRaj249/gitleaks-action
