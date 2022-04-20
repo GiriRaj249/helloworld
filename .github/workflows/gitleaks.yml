@@ -13,7 +13,7 @@ jobs:
       - name: gitleaks-action with config
         uses: actions/checkout@v2
         with:
-          repository: GiriRaj249/gitleaks-actions
+          repository: BuyersRoad/gitleaks-actions
           ref: main
           token: ${{ secrets.Git_Token }}
           path: ./action
