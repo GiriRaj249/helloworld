@@ -15,7 +15,6 @@ jobs:
         with:
           repository: BuyersRoad/gitleaks-actions
           ref: main
-          token: ${{ secrets.Git_Token }}
           path: ./action
       - name: run git actions
         uses: ./action
