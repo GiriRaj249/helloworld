@@ -25,7 +25,7 @@ jobs:
         with:
           status: ${{ job.status }}
           message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
-          footer: 'Linked Repo <{repo_url}|{repo}>'
+          footer: 'Linked Repo <{repo_url}|{repo}> | <{workflow_url}|View Workflow>'
           mention_users_when: 'failure,warnings'
           notify_when: 'failure'
         env:
