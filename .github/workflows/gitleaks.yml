@@ -26,6 +26,7 @@ jobs:
           status: ${{ job.status }}
           message_format: '{emoji} *{workflow}* {status_message} in <{repo_url}|{repo}>'
           footer: 'Linked Repo <{repo_url}|{repo}>'
+          mention_users_when: 'failure,warnings'
           notify_when: 'failure'
         env:
            SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
