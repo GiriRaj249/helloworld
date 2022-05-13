@@ -20,8 +20,8 @@ jobs:
       - name: run git actions
         uses: ./action
         
-      - name: Send Slack notification
-        uses: actions/checkout@v2
+      - name: Fetch config
+        uses: actions/checkout@v1
         with:
           repository: GiriRaj249/action-slack
           ref: main
