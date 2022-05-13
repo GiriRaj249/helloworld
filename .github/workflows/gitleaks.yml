@@ -22,7 +22,7 @@ jobs:
         
       - name: Report Status
         if: always()
-        uses: GiriRaj249/notify-slack-action@v1
+        uses: GiriRaj249/notify-slack-action@main
         with:
           status: ${{ job.status }}
           token: ${{ secrets.Git_Token }}
