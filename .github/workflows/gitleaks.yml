@@ -20,12 +20,13 @@ jobs:
       - name: run git actions
         uses: ./action
         
-      - name: Report Status
-        if: always()
-        uses: GiriRaj249/notify-slack-action@v1
+      - name: Send Slack notification
+        uses: 8398a7/action-slack@v2
+        if: failure()
         with:
           status: ${{ job.status }}
-          notify_when: 'failure'
+          author_name: ${{ github.actor }}
         env:
-          SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
       
