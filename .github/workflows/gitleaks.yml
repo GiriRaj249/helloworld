@@ -22,7 +22,6 @@ jobs:
         
       - name: Report Status
         if: always()
-        uses: actions/checkout@v1
         with:
           respository: GiriRaj249/notify-slack-action
           ref: main
