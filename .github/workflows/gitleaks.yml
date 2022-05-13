@@ -22,10 +22,8 @@ jobs:
         
       - name: Report Status
         if: always()
+        uses: ravsamhq/notify-slack-action@v1
         with:
-          respository: GiriRaj249/notify-slack-action
-          ref: main
-          token: ${{ secrets.Git_Token }}
           status: ${{ job.status }}
           notify_when: 'failure'
         env:
