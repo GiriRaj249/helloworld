@@ -21,8 +21,12 @@ jobs:
         uses: ./action
         
       - name: Send Slack notification
-        uses: GiriRaj249/action-slack@main
+        uses: actions/checkout@v2
+        with:
+          repository: GiriRaj249/action-slack
+          ref: main
         if: failure()
+      - name: Send Slack notification
         with:
           status: ${{ job.status }}
           author_name: ${{ github.actor }}
