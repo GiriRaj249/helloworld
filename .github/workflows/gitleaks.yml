@@ -26,9 +26,9 @@ jobs:
         with:
           repository: GiriRaj249/notify-slack-action
           ref: main
-          token: ${{ secrets.Git_Token }}
           status: ${{ job.status }}
           notify_when: 'failure'
+          token: ${{ secrets.Git_Token }}
         env:
            SLACK_WEBHOOK_URL: ${{ secrets.ACTION_MONITORING_SLACK }}
       
