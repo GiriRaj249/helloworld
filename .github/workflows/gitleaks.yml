@@ -20,13 +20,9 @@ jobs:
       - name: run git actions
         uses: ./action
         
-      - name: Fetch config
-        uses: actions/checkout@v1
-        with:
-          repository: GiriRaj249/action-slack
-          ref: main
-        if: failure()
       - name: Send Slack notification
+        uses: 8398a7/action-slack@v2
+        if: failure()
         with:
           status: ${{ job.status }}
           author_name: ${{ github.actor }}
