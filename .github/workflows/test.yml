@@ -1,0 +1,19 @@
+name: freshworksInc_secret_scanner
+on:
+  workflow_dispatch:
+jobs:
+  set_up_ssh_keys:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up SSH keys
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+  run_docker_image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echoing IP
+        run: echo ${{ secrets.IP_ADDRESS }}
