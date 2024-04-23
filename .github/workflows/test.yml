@@ -11,6 +11,7 @@ jobs:
           chmod 700 ~/.ssh
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}"
           chmod 600 ~/.ssh/id_rsa
   run_docker_image:
     runs-on: ubuntu-latest
