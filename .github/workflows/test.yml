@@ -16,4 +16,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echoing test
-        run: echo ${{ secrets.ACTION_MONITORING_SLACK }}
+        run: whoami
